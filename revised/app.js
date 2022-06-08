@@ -23,4 +23,30 @@
 
 // Modules
 
+// normal ways of  creating and calling a function 
+const Dimaria = "Anjal";
+const wick = "Prashant";
 
+const sayHi = (name) =>{
+    console.log(`Hello there, ${name}`)
+}
+
+sayHi('Ural');
+sayHi(Dimaria);
+sayHi(wick);
+
+// modules made an file well structured 
+
+// CommonJS, every file is module (by default)
+// Modules - Encapsulated code (only share minimum)
+
+// access module 
+
+const fullInfo = require('./2-names');
+// console.log(fullInfo);
+
+const balenInfo = require('./3-balenfunction');
+// console.log(balenFunc);
+
+balenInfo(fullInfo.fname, fullInfo.lname, fullInfo.bage, fullInfo.position); // information about balen
+// balenInfo(); // information about harka sampang
