@@ -11,3 +11,15 @@
 module.exports = api;
 
 console.log(exports, module, require, __filename, __dirname);
+
+
+// api2 = {
+//     id:2,
+//     firstname: "Ural",
+//     lastname : "Shrestha",
+//     positon1: "Backend-developer"
+// }
+
+// module.exports = api2;
+
+// console.log(api2.firstname);
