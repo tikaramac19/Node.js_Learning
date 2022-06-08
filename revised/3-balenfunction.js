@@ -5,4 +5,4 @@ const balenInfo = (fname, lname, bage, position) => {
 };
 
 
-module.exports = balenInfo;
+module.exports = balenInfo; // making this function available onto the another files
