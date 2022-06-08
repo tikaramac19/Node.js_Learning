@@ -45,8 +45,21 @@ sayHi(wick);
 const fullInfo = require('./2-names');
 // console.log(fullInfo);
 
+// here we can destructure like : 
+// const {fname,lname,bage,position} = require('./2-names');
+// or access like this into the function : fullInfo.fname, fullInfo.position etc.
+
 const balenInfo = require('./3-balenfunction');
 // console.log(balenFunc);
 
+// destructuring may be the best option to access the module objects.
+
 balenInfo(fullInfo.fname, fullInfo.lname, fullInfo.bage, fullInfo.position); // information about balen
 // balenInfo(); // information about harka sampang
+
+
+// accessing data from the module i.e alternative.js file
+
+const data = require('./4-alternative');
+
+console.log(data); // this will shown in the format of object called all the modules are actually a object.
