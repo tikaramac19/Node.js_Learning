@@ -27,6 +27,7 @@ http.createServer(function(req, res){
 
             fs.readFile(`${__dirname}/userapi.json`, "utf-8", (err, data)=>{
                     // console.log(data);
+                    // res.writeHead(200, {'Content-type' : 'application/json'});
 
                     const person1 = JSON.parse(data); // it converts json format to object 
 
@@ -34,19 +35,18 @@ http.createServer(function(req, res){
 
                     console.log(person1[2].name, person1[2].address.street)  // print the name of the first index number  of an array we created.
 
-
-
-
                     if(!err){
                         res.end(data);
                     }else{
                         throw err;
                     }
 
-            });
-            res.writeHead(200, {'Content-type' : 'text/html'});
+                    // res.end(data);
 
-            res.end("Welcome to the UserApi Page")
+            });
+            // res.writeHead(200, {'Content-type' : 'text/html'});
+
+            // res.end("Welcome to the UserApi Page")
 
         }
         else{
@@ -54,10 +54,7 @@ http.createServer(function(req, res){
             res.end("404 error pages. Page doesn't exitst");
         }
 
-
-
-
-        res.end();
+        // res.end();
 }).listen(PORT);
 
 
