@@ -1,8 +1,64 @@
 [
     {
-
+        "id": 1,
+        "name": "Anjal Thapa",
+        "username":"Tarekkkk",
+        "email" : "aeenjal@gmail.com",
+        "address" : {
+            "street" : "Jharuwa rashi",
+            "toal" : "mathivapar",
+            "house" : "Apt. 420",
+            "city" : "Lalitpur",
+            "Zipcode" : "42012"
+        },
+        "phone" : "9822508086",
+        "website" : "www.mysticworld.com"
     },
     {
-        
+
+        "id": 2,
+        "name": "Ural Stha",
+        "username":"sthaUral",
+        "email" : "ural123@gmail.com",
+        "address" : {
+            "street" : "Thaiba ",
+            "toal" : "herosima",
+            "house" : "Apt. 786",
+            "city" : "Lalitpur",
+            "Zipcode" : "42011"
+        },
+        "phone" : "9823408086",
+        "website" : "www.gunne.com"
+    },
+    {
+
+        "id": 3,
+        "name": "Parasar Baral",
+        "username":"paribaral",
+        "email" : "paribaral420@gmail.com",
+        "address" : {
+            "street" : "thimi ",
+            "toal" : "thimilite",
+            "house" : "Apt. 336",
+            "city" : "Bhaktapur",
+            "Zipcode" : "42231"
+        },
+        "phone" : "9823404566",
+        "website" : "www.pari.com"
+    }, {
+
+        "id": 4,
+        "name": "Bibas giri",
+        "username":"heroalam",
+        "email" : "rolpe222@gmail.com",
+        "address" : {
+            "street" : "mangalgadi ",
+            "toal" : "charitol",
+            "house" : "Apt. 3436",
+            "city" : "Rolpa",
+            "Zipcode" : "55541"
+        },
+        "phone" : "9825404566",
+        "website" : "www.heroalam.com"
     }
 ]
