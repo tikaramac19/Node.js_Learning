@@ -28,3 +28,20 @@ start();
 
 // 4. WebAPI
 // Ajax, setTimeout, DOM
+
+// Task Queue
+// the callback are stored into the task queue
+
+// 5. Event Loop
+// event loop looks up on task queue and call stack
+// if there is any callbacks on the task queue and at the same the call stack is empty 
+// then event loop takes that callback and put it into the call stack.
+// node: it will done only when the callstack will empty otherwise it will not happen.
+
+console.log('start');
+
+setTimeout(function cb(){
+    console.log('cb');
+}, 3000);
+
+console.log('End');
