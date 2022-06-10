@@ -37,6 +37,8 @@ event.emit('sayMyName');
 
 // after calling multiple callback function of an event we can do as many task only clicing once. so it is very useful 
 
+
+
 // Example 3 - Registering for the event with callback parameters.
 
 const EventEmit = require('events');
@@ -44,8 +46,8 @@ const EventEmit = require('events');
 const eventttt = new EventEmit();
 
 
-eventttt.on("click", ()=>{
-    console.log("Click me");
+eventttt.on("checkPage", (sc, msg)=>{ 
+    console.log(`status code is : ${sc} and the page is ${msg}`);
 })
 
-eventttt.emit("click");
+eventttt.emit("checkPage", 200, 'ok'); // parameters 
