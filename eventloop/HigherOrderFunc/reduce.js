@@ -68,3 +68,28 @@ const duplicate = addData.filter((x, index) =>{
 })
 
 console.log(duplicate);
+
+
+// reduce() method
+// just like the name suggest reduce, actually it doesnot reduce anything haha
+
+const reduceData = [4,6,3,8,3,5];
+
+// so , we will itterate in this array data and find out the some of the item 
+// or iterate in this each and every array element and find out the largest item or element among these.
+
+// without using reduce()   method
+// here we can find the sum of all the element present in the array
+function find(arr){
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+        
+    }
+
+    return sum
+
+}
+
+console.log(find(reduceData));
