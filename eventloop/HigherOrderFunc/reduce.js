@@ -15,7 +15,7 @@ const arr = [3,4,7,2,9,7,5];
     console.log(outputTriple);
 
 
-const output = arr.map((double, index)=>{
+const output = arr.map((double, index)=>{ // doing like this is known as the higher order functions
     return double * 2;
 })
 
@@ -36,7 +36,7 @@ console.log(outputDemo);
 // transforming into the binary of the given array data
 
 const binary = (z) => {
-    return z.toString(2)
+    return z.toString(2)  // comverting an array item into the binary number
 }
 
 const outputBinaray = arr.map(binary);
