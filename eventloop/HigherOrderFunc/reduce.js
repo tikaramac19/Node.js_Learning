@@ -32,3 +32,13 @@ const outputDemo = arr.map(doubleFunc)
 console.log(outputDemo);
 
 // console.clear();
+
+// transforming into the binary of the given array data
+
+const binary = (z) => {
+    return z.toString(2)
+}
+
+const outputBinaray = arr.map(binary);
+
+console.log(outputBinaray);
