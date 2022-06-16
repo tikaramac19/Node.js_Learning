@@ -112,3 +112,20 @@ console.log(reduceOutput);
 
 // Note: reduce() methods takes two arguments first one is callback function iteself and 
 // another one is initial value of the accumulator (acc).
+
+// finding the maxmum number inside the array (logic)
+
+function findMax(arr){
+    let max = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        
+        if(arr[i] > max){
+            max = arr[i];
+        }
+         
+    }
+    return max;
+}
+
+console.log(findMax(reduceData));
