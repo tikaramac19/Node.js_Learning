@@ -26,8 +26,8 @@ http.createServer(function(req, res){
         else if(req.url == '/userapi'){
 
             fs.readFile(`${__dirname}/userapi.json`, "utf-8", (err, data)=>{
-                    // console.log(data);
-                    // res.writeHead(200, {'Content-type' : 'application/json'});
+                    console.log(data);
+                    res.writeHead(200, {'Content-type' : 'application/json'});
 
                     const person1 = JSON.parse(data); // it converts json format to object 
 
