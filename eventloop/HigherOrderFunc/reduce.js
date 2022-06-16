@@ -93,3 +93,22 @@ function find(arr){
 }
 
 console.log(find(reduceData));
+
+
+// using reduce () method
+
+// in the callback function of the reduce method it take basically two 
+// parameters called accumulator (acc) and current (curr);
+
+// here curr is the current element in the array and acc means the accumulator which is an empty 
+// variable whare we can store the sum of the elements
+const reduceOutput = reduceData.reduce((acc, curr)=>{
+    acc = acc + curr;
+
+    return acc;
+}, 0);
+
+console.log(reduceOutput);
+
+// Note: reduce() methods takes two arguments first one is callback function iteself and 
+// another one is initial value of the accumulator (acc).
