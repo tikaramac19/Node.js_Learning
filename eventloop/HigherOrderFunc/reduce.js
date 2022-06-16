@@ -5,8 +5,15 @@ const arr = [3,4,7,2,9,7,5];
 
 // transformation of the array eg.
 // Double - [6,8,14,4,18,14,10]
-//triple - []
-// binary - [];
+//triple - [9, 12, 21, 6, 27, 21, 15]
+    const triple = (y) =>{
+        return y *3;
+    }
+
+    const outputTriple = arr.map(triple);
+
+    console.log(outputTriple);
+
 
 const output = arr.map((double, index)=>{
     return double * 2;
@@ -24,4 +31,4 @@ const doubleFunc=(x)=>{
 const outputDemo = arr.map(doubleFunc)
 console.log(outputDemo);
 
-console.clear();
+// console.clear();
