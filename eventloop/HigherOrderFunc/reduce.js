@@ -42,3 +42,29 @@ const binary = (z) => {
 const outputBinaray = arr.map(binary);
 
 console.log(outputBinaray);
+
+
+// Concept of filter() function 
+// filter function is used to filter an values which is inside an array.
+const addData = [4,2,7,1,2,3,2,7,3,9];
+
+// filter odd values
+
+const filterOutput = addData.filter((x) =>{
+    return x % 2;
+})
+
+console.log(filterOutput);
+
+const greaterValue = addData.filter((x)=>{
+    return x >3;
+})
+
+console.log(greaterValue);
+
+//remove the duplicate values
+const duplicate = addData.filter((x, index) =>{
+    return addData.indexOf(x) == index;
+})
+
+console.log(duplicate);
