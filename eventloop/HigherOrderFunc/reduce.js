@@ -142,3 +142,40 @@ const reduceOut = reduceData.reduce((acc, curr)=>{
 }, 0);
 
 console.log(reduceOut);
+
+// output should be 8
+
+// reduce() method in javascript advance
+
+const personInfo= [
+    {
+        name : "Bibash",
+        age : 22
+    },
+    {
+        name : "Anjal",
+        age : 24
+    },
+    {
+        name : "Ural",
+        age : 23
+    },
+    {
+        name : "Manish",
+        age : 21
+    }
+]
+
+const newInfo = personInfo.reduce(function(acc, curr){
+        if(acc[curr.age]){
+            acc[curr.age] = acc[curr.age] + 1;
+        }
+        else{
+            acc[curr.age] =1 ;
+        }
+
+        return acc;
+}, {})
+
+console.log(personInfo);
+console.log(newInfo);
