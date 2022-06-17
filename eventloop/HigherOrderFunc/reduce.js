@@ -177,5 +177,32 @@ const newInfo = personInfo.reduce(function(acc, curr){
         return acc;
 }, {})
 
-console.log(personInfo);
+// console.log(personInfo);
+
 console.log(newInfo);
+
+// Map() method
+
+const users = [
+    {
+        fname: "Tikaram",
+        lname :"Acharya",
+        age : 22
+    },
+    {
+        fname: "Ural",
+        lname :"shrestha",
+        age : 22
+    },
+    {
+        fname: "Rajish",
+        lname :"Maharzan",
+        age : 22
+    }
+]
+
+const fullName = users.map((user, index) =>{
+    return ` ${index} MY name is ${user.fname} ${user.lname}`
+});
+
+console.log(fullName);
