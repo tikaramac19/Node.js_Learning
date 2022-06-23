@@ -43,7 +43,7 @@ sayHi(wick);
 // access module 
 
 const fullInfo = require('./2-names');
-// console.log(fullInfo);
+console.log(fullInfo);
 
 // here we can destructure like : 
 // const {fname,lname,bage,position} = require('./2-names');
@@ -62,4 +62,10 @@ balenInfo(fullInfo.fname, fullInfo.lname, fullInfo.bage, fullInfo.position); // 
 
 const data = require('./4-alternative');
 
+const {array, object} = data;
+
 console.log(data); // this will shown in the format of object called all the modules are actually a object.
+
+// console.log(array);  result: undefined
+
+// console.log(object);   result: undefined
