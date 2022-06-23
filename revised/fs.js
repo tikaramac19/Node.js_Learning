@@ -21,6 +21,7 @@
 
 let http = require('http');
 let fs = require('fs');
+const { deepStrictEqual } = require('assert');
 
 http.createServer(function(req, res){
 
@@ -33,3 +34,20 @@ http.createServer(function(req, res){
 
 
 }).listen(8080);
+
+
+// Create Files
+
+// The file system module has methods for creating new files:
+    // fs.appendFile()
+    // fs.open()
+    // fs.writeFile()
+
+    // The fs.appendFile() method appends specified content to a file. If the file does not exitst,
+    // the file will be created
+
+    fs.appendFile("demo.txt", 'Hello content !', function(err){
+            if(err) throw err;
+
+            console.log('File created !');
+    });
