@@ -80,3 +80,15 @@ fs.writeFile("MyNewFile.txt", "Hello there! this is new file.", function(err){
 // The fs.appendFile() method appends the specified content at the end of the specified file.
 
 // The fs.writeFile() method replaces the specified file and content.
+
+// Delete Files
+
+// To delete a file with the file system module, use the fs.unlink() method.
+
+// The  fs.unlink() method deletes the specified file:
+
+fs.unlink("demo.txt", function(err){
+    if(err) throw err;
+
+    console.log('file deleted !');
+})
