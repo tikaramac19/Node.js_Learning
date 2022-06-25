@@ -51,3 +51,32 @@ http.createServer(function(req, res){
 
             console.log('File created !');
     });
+
+// The fs.open() method takes a "flag" as the second argument, if the flag is "w" for "waiting", the 
+// specified file is opened for writing. If the file does not exist, an empty file is created:
+
+fs.open("demo.txt", 'w', function(err, file){
+    if(err) throw err;
+
+    console.log('saved');
+})
+
+
+// The fs.writeFile() method replaces the specified file and content if it exists. If the file not exist
+// a new file, containing the specified content, will be created:
+
+fs.writeFile("MyNewFile.txt", "Hello there! this is new file.", function(err){
+    if(err) throw err;
+
+    console.log("new file created !");
+});
+
+// Update Files
+
+// The file system module has methods for updating files:
+// fs.appendFile()
+// fs.writeFile()
+
+// The fs.appendFile() method appends the specified content at the end of the specified file.
+
+// The fs.writeFile() method replaces the specified file and content.
