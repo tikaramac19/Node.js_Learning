@@ -92,3 +92,15 @@ fs.unlink("demo.txt", function(err){
 
     console.log('file deleted !');
 })
+
+// Rename Files
+
+// To rename a file with the File system module, use the fs.rename() method.
+
+// The fs.rename() method renames the specified file.
+
+fs.rename("MyNewFile.txt", "MyNewRenameFile.txt" , function(err){
+    if(err) throw err;
+
+    console.log("File renamed successfully !");
+})
