@@ -26,3 +26,12 @@ console.log(qdata.year) // returns 2017
 
 console.log(qdata.month); // it returns february
 
+let addr2 = 'https://www.w3schools.com/nodejs/nodejs_url.asp';
+
+let z = url.parse(addr2, true);
+
+console.log(z.host); // it returns www.w3schools.com
+
+console.log(z.pathname); // it returns /nodejs/nodejs_url.asp
+
+console.log(z.search); // it returns null coz we didnt search anything 
