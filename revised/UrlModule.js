@@ -56,7 +56,7 @@ http.createServer(function(req, res){
 
     let filename = "." + p1.pathname;
 
-    console.log(p1.pathname);
+    // console.log(p1.pathname);
 
     fs.readFile(filename, function(err, data){
         if(err){
