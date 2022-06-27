@@ -1,3 +1,4 @@
+// import {config} from 'dotenv'
 require('dotenv').config();
 
 // The Nodemailer Module
@@ -28,7 +29,7 @@ let transporter = nodemailer.createTransport({
 
 let mailOptions = {
     from:'acharyatikaram258@gmail.com',
-    to : 'shresthaural100@gmail.com, sandipshakya75@gmail.com',
+    to : 'shresthaural100@gmail.com, bibasgiri50@gmail.com',
     subject : 'Hello guyz ! sending this email using Node.js ',
     text: 'Kada raixa haha'
 };
