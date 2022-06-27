@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // The Nodemailer Module
 
 // The nodemailer module can be downloaded and installed using npm.
@@ -20,7 +22,7 @@ let transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         user: 'acharyatikaram258@gmail.com',
-        pass: 'ndtceelbfiuuwetr'
+        pass: process.env.GENERATED_PASS
     }
 });
 
