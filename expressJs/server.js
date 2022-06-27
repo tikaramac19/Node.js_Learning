@@ -24,10 +24,16 @@ app.get('/' , (req, res)=>{
 })
 
 
-
+// for users route
 const userRouter = require("./routes/users");  // importing users router 
 
 app.use('/users', userRouter); // linking a route to the particular path
+
+// for posts route
+
+const postRouter = require('./routes/posts'); // importing posts router
+
+app.use('/posts', postRouter); // linking a route to the particular path
 
 app.listen(port, ()=>{
     // console.log(`server is starting at Port http://localhost:${port}`);
