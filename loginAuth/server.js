@@ -1,11 +1,32 @@
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
+
 const express = require('express');
 const app = express();
 const port = 8080;
 const bcrypt = require('bcrypt'); // used to encrypt the original password
+const passport = require('passport')
+const flash = require('express-flash')
+const session = require('express-session')
 
-app.set("view-engine", "ejs");
+const initializePassport = require('./passport-config')
+initializePassport(passport, email =>{
+    users.find(user =>user.email === email ),
+    id => users.find(user => user.id === id)
+}); // invoke passport-config function 
+
+app.set("view-engine", "ejs"); // used for rendering html in server
 
 app.use(express.urlencoded({extended:false}));
+app.use(flash());
+app.use(session({
+    secret : process.env.SESSION_SECRET,
+    resave : false,
+    saveUninitialized : false
+}))
+app.use(passport.initialize());
+app.use(passport.session())
 
 const users = [];
 
@@ -16,10 +37,12 @@ app.get("/", (req, res)=>{
 app.get("/login", (req,res)=>{
     res.render("login.ejs")
 })
-
-app.post('/login', (req,res)=>{
-    
-})
+// post method for login 
+app.post('/login', passport.authenticate('local', {
+    successRedirect : '/',
+    failureRedirect : '/login',
+    failureFlash: true
+}) )
 
 
 
@@ -30,6 +53,7 @@ app.get("/register", (req,res)=>{
     res.render("register.ejs")
 })
 
+// post method for register
 app.post('/register', async(req,res)=>{
     
     try{
