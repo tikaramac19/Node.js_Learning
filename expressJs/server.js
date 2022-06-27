@@ -3,6 +3,8 @@ const { reset } = require("nodemon");
 const app = express();
 const port = 8080;
 
+
+
 app.set('view engine', "ejs") // rendering html
 
 app.get('/' , (req, res)=>{
@@ -22,15 +24,10 @@ app.get('/' , (req, res)=>{
 })
 
 
-app.get('/users', (req,res)=>{
-       res.send("Users List"); 
-})
 
+const userRouter = require("./routes/users");  // importing users router 
 
-app.get("/users/new" , (req, res)=>{
-    res.send("users forms list")
-})
-
+app.use('/users', userRouter); // linking a route to the particular path
 
 app.listen(port, ()=>{
     // console.log(`server is starting at Port http://localhost:${port}`);
