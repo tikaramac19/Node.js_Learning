@@ -7,10 +7,10 @@ router.get('/', (req,res)=>{
     res.send("Users List"); 
 })
 
-
 router.get("/new" , (req, res)=>{
- res.send("users forms list")
-})
+    res.send("users forms list")
+   })
+
 // advanced routing 
 
 router.post('/', (req,res)=>{
@@ -23,5 +23,31 @@ router.get('/:id', (req,res)=>{
     
     res.send(`Get the user with ID ${req.params.id}`);
 })
+
+// it updates the user according to our id
+router.put('/:id', (req,res)=>{
+    
+    
+    res.send(`Update the user with ID ${req.params.id}`);
+})
+router.delete('/:id', (req,res)=>{
+    
+    
+    res.send(`Delete the user with ID ${req.params.id}`);
+})
+
+// we can write above code like this also
+
+// router.route('/:id').get(
+//     router.get((req,res)=>{
+//         res.send(`Get the user with ID ${req.params.id}`);
+//     }).put((req,res)=>{
+//             res.send(`update the user with ID ${req.params.id}`);
+//     }).delete(
+//         (req,res)=>{
+//             res.send(`Delete the user with ID ${req.params.id}`)
+//         }
+//     )
+// )
 
 module.exports = router; // export user router
