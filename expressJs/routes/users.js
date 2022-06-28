@@ -22,6 +22,9 @@ router.get('/:id', (req,res)=>{
     // req.params.id
     
     res.send(`Get the user with ID ${req.params.id}`);
+
+    console.log(req.user);
+
 })
 
 // it updates the user according to our id
@@ -49,5 +52,13 @@ router.delete('/:id', (req,res)=>{
 //         }
 //     )
 // )
+
+const users = [{name:"Tikaram"}, {name: "Narayan"}]
+
+router.param("id", (req,res, next, id)=>{ // it works like an middleware
+        // console.log(id);
+    req.user = users[id]
+        next();
+})
 
 module.exports = router; // export user router
