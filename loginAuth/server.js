@@ -32,7 +32,7 @@ app.use(passport.session())
 const users = [];
 
 app.get("/", (req, res)=>{
-    res.render("index.ejs");
+    res.render("index.ejs", {name: req.user.name});
 })
 // for login page
 app.get("/login", (req,res)=>{
