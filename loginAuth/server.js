@@ -11,13 +11,14 @@ const flash = require('express-flash')
 const session = require('express-session')
 
 const initializePassport = require('./passport-config')
-initializePassport(passport, email =>{
-    users.find(user =>user.email === email ),
+initializePassport(passport,
+    email => users.find(user => user.email === email),
     id => users.find(user => user.id === id)
-}); // invoke passport-config function 
+); // invoke passport-config function 
+
+
 
 app.set("view-engine", "ejs"); // used for rendering html in server
-
 app.use(express.urlencoded({extended:false}));
 app.use(flash());
 app.use(session({
