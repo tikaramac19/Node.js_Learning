@@ -3,7 +3,7 @@ const { reset } = require("nodemon");
 const app = express();
 const port = 8080;
 
-
+app.use(express.static("public"))  // rendering static files
 
 app.set('view engine', "ejs") // rendering html
 
