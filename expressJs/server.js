@@ -9,7 +9,7 @@ app.set('view engine', "ejs") // rendering html
 
 app.get('/' , (req, res)=>{
 
-    // console.log("worked");
+    // console.log("worked");  
     // res.status(200)
     // res.send("Hello there !")
     // res.download("server.js")
