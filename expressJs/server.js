@@ -28,12 +28,19 @@ app.get('/' , (req, res)=>{
 const userRouter = require("./routes/users");  // importing users router 
 
 app.use('/users', userRouter); // linking a route to the particular path
-
+app.use(logger);
 // for posts route
 
 const postRouter = require('./routes/posts'); // importing posts router
 
 app.use('/posts', postRouter); // linking a route to the particular path
+
+// Middleware
+function logger(req,res, next){
+    console.log(req.originalUrl)
+    next()
+}
+
 
 app.listen(port, ()=>{
     // console.log(`server is starting at Port http://localhost:${port}`);
