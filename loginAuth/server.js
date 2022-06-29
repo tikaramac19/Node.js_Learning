@@ -9,6 +9,7 @@ const bcrypt = require('bcrypt'); // used to encrypt the original password
 const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
+const method_overrid  = require('method-override')
 
 const initializePassport = require('./passport-config')
 initializePassport(passport,
@@ -28,6 +29,7 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session())
+app.use(method_overrid('_method'))
 
 const users = [];
 
@@ -76,6 +78,11 @@ app.post('/register',checkNotAuthenticated, async(req,res)=>{
 
 })
 
+app.delete('/logout', (req,res)=>{  // for logout button
+    req.logOut();
+    res.redirect('/login');
+})
+
 function checkAuthenticated(req,res, next){  // if user doesnt logged in it redirect to the login page
     if(req.isAuthenticated()){
         return next()
@@ -86,7 +93,7 @@ function checkAuthenticated(req,res, next){  // if user doesnt logged in it redi
 
 function checkNotAuthenticated(req,res, next){  // if user doesnt logged in it redirect to the login page
     if(req.isAuthenticated()){
-        res.redirect('/')
+       return res.redirect('/')
     }
 
     next()
