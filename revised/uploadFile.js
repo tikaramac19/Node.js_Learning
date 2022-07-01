@@ -37,3 +37,8 @@ http.createServer(function(req,res){
 }).listen(8080);
 
 
+// step 2: Parse the uploaded file
+// Include the formidable module to be able to parse the uploaded file once it reaches the server.
+
+// when the file is uploaded, it gets placed on a temporary folder on you computer.
+
