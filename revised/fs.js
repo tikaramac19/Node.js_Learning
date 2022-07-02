@@ -88,7 +88,7 @@ fs.writeFile("MyNewFile.txt", "Hello there! this is new file.", function(err){
 // The  fs.unlink() method deletes the specified file:
 
 fs.unlink("demo.txt", function(err){
-    if(err) throw err;
+    // if(err) throw err;
 
     console.log('file deleted !');
 })
