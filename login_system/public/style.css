@@ -1,6 +1,23 @@
-.center-div{
-   padding-top: 10%;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap");
+
+body{
+    font-family: 'Poppins', sans-serif;
 }
-.btn.btn-success{
-    padding: 0.6rem 1rem;
+
+.center-div {
+  padding-top: 10%;
+}
+.btn.btn-success {
+  padding: 0.6rem 1rem;
+}
+
+form{
+    padding: 0 1rem;
+}
+
+#login .title>span{
+    font-size: 0.91rem;
+}
+.text{
+    float: left;
 }
