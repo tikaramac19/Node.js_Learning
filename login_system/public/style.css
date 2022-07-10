@@ -2,6 +2,9 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background: url('/assets/bgone.jpg');
+    /* background-position: center; */
+    background-attachment: fixed;
 }
 
 .center-div {
