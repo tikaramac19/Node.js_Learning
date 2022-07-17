@@ -1,11 +1,28 @@
 const express = require('express');
 const app = express();
 const port = 8080;
+const bodyParser = require('body-parser');
 
-app.use('/products',(req,res,next)=>{
-    res.send('<h3>Hello from "PRODUCTS PAGE" ! </h3>')
+app.use(bodyParser.urlencoded({extended: false}));
+
+// app.use('/products',(req,res,next)=>{
+//     res.send('<h3>Hello from "PRODUCTS PAGE" ! </h3>')
+// })
+
+app.use('/login', (req,res)=>{
+    res.send('<form action="log" method= "POST"> <input type="text" name="item"><button>Add Products</button> </input> </form>');
+
 })
 
+app.use('/log', (req,res)=>{
+    
+    console.log(req.body)
+
+    res.redirect('/result')
+})
+app.get('/result', (req,res)=>{
+    res.send(`Entered Item is ${req.body.item}`)
+})
 app.use('/',(req,res,next)=>{
     res.send('<h3>Hello from expressJS ! </h3>')
 })
