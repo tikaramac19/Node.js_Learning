@@ -4,7 +4,7 @@ if(process.env.NODE_ENV !== 'production'){
 
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = 3000;
 const bcrypt = require('bcrypt'); // used to encrypt the original password
 const passport = require('passport')
 const flash = require('express-flash')
