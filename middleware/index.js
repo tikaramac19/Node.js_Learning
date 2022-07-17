@@ -14,6 +14,8 @@ app.use((req, res, next)=>{
 
 app.use((req,res, next) =>{
     console.log('in an another middleware');
+
+    res.send('<h1>Hello from express !</h1>'); // it allows to send a response
 })
 
 // the function we pass to app.use() will be executed for every incomming 
@@ -29,6 +31,8 @@ app.use((req,res, next) =>{
 const server = http.createServer(app);
 
 server.listen(port, ()=> console.log(`server is running at http://localhost:8080`));
+
+// app.listen(port);
 
 // Express js is all about middleware
 // so instead of just having one request handler, you will actually have a possibility of 
