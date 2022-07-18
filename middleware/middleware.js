@@ -37,10 +37,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 
 app.use(adminRoute);
-
 app.use(shopRoute);
 
-
+app.use('/', (req,res)=>{
+    res.status(404).send('<h1>Page not found</h1>')  // showing the 404 error page with status code 
+})
 
 app.listen(port, ()=>{
     console.log(`server running at http://localhost:${port}`);
