@@ -7,14 +7,13 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
 router.get('/add-product', (req, res)=>{
-    res.send('<form action="log" method= "POST"> <input type="text" name="item"><button>Add Products</button> </input> </form>');
+    res.send('<form action="/product" method= "POST"> <input type="text" name="item"><button>Add Products</button> </input> </form>');
 
 })
 
-router.post('/product', (req, res)=>{
+router.get('/product', (req, res)=>{
     console.log(req.body)
-
-    res.redirect('/')
+    res.send('<h3> The added item is saved ! </h3>')
 })
 
 module.exports = router;
