@@ -36,8 +36,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 // all the other middleware
 
 
-app.use(adminRoute);
-app.use(shopRoute);
+app.use('/admin',adminRoute);
+app.use('/shop',shopRoute);
 
 app.use('/', (req,res)=>{
     res.status(404).send('<h1>Page not found</h1>')  // showing the 404 error page with status code 
