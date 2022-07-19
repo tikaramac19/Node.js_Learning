@@ -1,0 +1,29 @@
+<!-- include header -->
+<%- include('include/_header.ejs') %>
+<!--/ include header -->
+
+<!-- form content -->
+
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <div class="filter">
+        <a href="/"> <i class="fa-solid fa-angles-left"></i> All Users</a>
+      </div>
+    </div>
+    <div class="form-title text-center">
+      <h2 class="text-dark">New User</h2>
+      <span class="text-light">
+        Use the below form to create a new account
+      </span>
+    </div>
+    <!-- including partial form file  -->
+    <%- include('include/_form.ejs') %>
+  </div>
+</main>
+
+<!-- form content ends-->
+
+<!-- include footer -->
+<%- include('include/_footer.ejs') %>
+<!--/ include footer -->
