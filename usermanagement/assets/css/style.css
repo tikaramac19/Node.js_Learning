@@ -96,3 +96,51 @@ table{
     color: #fff;
     background-color: var(--dark);
 }
+
+/* add user and update user template */
+.form-title{
+    text-align: center;
+    margin: 2em 0em;
+}
+.form-title > h2{
+    padding: .5em 0;
+}
+.new_user{
+    max-width: 786px;
+    margin: auto;
+}
+#update_user .form-group, #add_user .form-group{
+    margin: .4em 0;
+}
+
+#update_user .form-group input[type = "text"],
+#add_user .form-group input[type = "text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-size: 1em;
+    border-radius: .3em;
+}
+#update_user .form-group .radio{
+    margin: 1em 2em;
+}
+.radio-inline{
+    display: inline;
+    padding: 1em 2em;
+}
+
+#update_user .form-group .btn{
+    margin: 1em 0;
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #06d6a0;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+#update_user .form-group .btn:hover{
+    background-color: var(--dark);
+    color: white;
+}
