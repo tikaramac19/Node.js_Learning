@@ -27,10 +27,8 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 
 
-
-
 app.get('/', (req,res)=>{
-    res.send("Crud Application")
+    res.render('index'); // rendering index file of the views 
 });
 
 app.listen(PORT, ()=>{
