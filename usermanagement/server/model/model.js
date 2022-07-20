@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 
 let schema = new mongoose.Schema({
     name: {
-        type: string,
+        type: String,
         required: [true, 'Please enter your name']
     },
     email: {
-        type: string,
+        type: String,
         required: [true, 'Please enter your email'],
         unique: true
     },
-    gender: string,
-    status: string
+    gender: String,
+    status: String
 })
 
 const Userdb = mongoose.model('userdb', schema);
