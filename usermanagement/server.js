@@ -5,11 +5,18 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+// call the connection from database
+const connectDB = require('./server/database/connection');
+
 dotenv.config({path: '.env'});
 const PORT = process.env.PORT || 8080;
 
 // log request
 app.use(morgan('tiny')) // alows to console the request when we refresh the page
+
+// mongodb connection
+connectDB();
+
 
 // parse request to body-parser
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,7 +35,6 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 
 
 // load routers
-
 app.use('/', require('./server/routes/router'));
  
 app.listen(PORT, ()=>{
