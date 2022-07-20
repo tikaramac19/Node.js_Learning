@@ -1,18 +1,19 @@
 const express = require('express');
 const app = express();
 const router = express.Router()
+const services = require('../services/render')
 
+// @description Root Router
+// @Method GET/
 
-router.get('/', (req,res)=>{
-    res.render('index'); // rendering index file of the views 
-});
+router.get('/',services.homeRoutes );
 
-router.get('/add_user', (req,res)=>{
-    res.render('add_user');
-})
+// @description add_user Router
+// @Method GET/add_user
+router.get('/add_user', services.add_user);
 
-router.get('/update_user', (req,res)=>{
-    res.render('update_user');
-})
+// @description update_user Router
+// @Method GET/update_user
+router.get('/update_user',services.update_user);
 
 module.exports = router;
