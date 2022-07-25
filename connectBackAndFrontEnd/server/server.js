@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
-const PORT = 8000
+const dotenv = require('dotenv');
+
+
+dotenv.config({path: '.env'});
+const PORT = process.env.PORT || 8080;
 
 app.use('/', (req,res)=>{
     res.send("Home Route")
