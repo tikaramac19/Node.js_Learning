@@ -2,9 +2,14 @@ const express = require('express')
 const app = express()
 const dotenv = require('dotenv');
 
+const connectDb = require('./server/database/connection')
 
 dotenv.config({path: '.env'});
 const PORT = process.env.PORT || 8080;
+
+//connecting userdb function
+connectDb();
+
 
 app.use('/', (req,res)=>{
     res.send("Home Route")
