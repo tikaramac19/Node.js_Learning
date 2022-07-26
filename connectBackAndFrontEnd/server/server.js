@@ -7,7 +7,7 @@ const connectDb = require('./server/database/connection')
 dotenv.config({path: '.env'});
 const PORT = process.env.PORT || 8080;
 
-//connecting userdb function
+//connecting mongodb
 connectDb();
 
 
