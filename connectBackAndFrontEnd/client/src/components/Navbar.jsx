@@ -4,6 +4,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Toolbar } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+
+const Header = styled(AppBar)`
+  background: #333;
+`;
 const Tabs = styled(Link)`
   margin-right: 1.3rem;
   font-weight: bold;
@@ -15,7 +19,7 @@ const Tabs = styled(Link)`
 const Navbar = () => {
   return (
     <>
-      <AppBar position="static">
+      <Header position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -30,7 +34,7 @@ const Navbar = () => {
           <Tabs to="all-users">All Users</Tabs>
           <Tabs to="add-user">Add User</Tabs>
         </Toolbar>
-      </AppBar>
+      </Header>
     </>
   );
 };
