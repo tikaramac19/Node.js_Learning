@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    
+   
 }
 /* html{
     font-size: 62.5%;
@@ -16,6 +16,7 @@
     /* background-color: crimson; */
     height: auto;
     width: 100%;
+    
 }
 .container-info{
     height: 34px;
@@ -104,11 +105,130 @@
 } 
 
 
+/* styling dropdown menu */
+.contain .nav-menu{
+    height: 30px;
+    width: 100%;
+    background-color: #04AA6D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu .homebtn{
+    margin: 2rem;
+}
+.nav-menu .homebtn a{
+    color: white;
+    /* padding: 16px; */
+    font-size: 16px;
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+}
+.nav-menu .homebtn a:hover{
+    text-decoration: underline;
+}
 
+.dropbtn {
 
+    background-color: #04AA6D;
+    color: white;
+    /* padding: 16px; */
+    font-size: 16px;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color:#04AA6D;  }
 
 
 
 img{
     height: 100px;
+}
+
+/* styling birth registration page */
+.form-container{
+    
+    height: 720px;
+    width: 100%;
+    border: 2px solid ;
+   
+}
+.form-container .birth-title h3{
+    font-size: auto;
+    text-align: center;
+    margin: 1rem;
+    color: black;
+    font-weight: 800;
+    
+}
+
+.form-value-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.personal-detail, .Father-detail, .GrandFathers-detail, .Mother-detail{
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 5rem;
+}
+.personal-detail h4, .Father-detail h4, .GrandFathers-detail h4, .Mother-detail h4{
+    margin-bottom: 1rem;
+    color: #626262;
+    font-weight: bold;
+}
+.personal-detail form .top-content , .bottom-content{
+    display: flex;
+    
+}
+.personal-detail form .top-content input{
+    /* width: 500px; */
+    margin: 0rem 4rem;
+}
+.personal-detail form .bottom-content input{
+    /* width: 500px; */
+    margin: 0rem 4rem;
+}
+.personal-detail .bottom-content #birthday{
+    height: 40px;
+    width: 30%;
+    padding: 0.2rem;
+    color: rgb(123, 121, 119);
+    outline: none;
+}
+.personal-detail .address{
+    margin-left: 4rem;
+    width: 42%;
 }
