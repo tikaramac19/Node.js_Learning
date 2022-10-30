@@ -1,0 +1,26 @@
+<!-- include header -->
+<%- include('include/header.ejs') %>
+
+<!-- hero section here -->
+
+<div class="signup-contianer">
+    <h3 class="titlesign">Registration Page</h3>
+    <form action="/register" method="post">
+        <div class="row1">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="your Name" required>
+        </div>
+        <div class="row1">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="email" required>
+        </div>
+        <div class="row1">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="password" required>
+        </div>
+        <button type="submit">SignUp</button>
+    </form>
+</div>
+
+<!-- include footer -->
+<% include('include/footer.ejs') %>
