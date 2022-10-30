@@ -16,6 +16,9 @@
     /* background-color: crimson; */
     height: auto;
     width: 100%;
+    /* position: sticky;
+    top: 0%;
+    left: 0%; */
     
 }
 .container-info{
@@ -26,6 +29,7 @@
     justify-content: center;
     align-items: center;
     justify-content: space-around;
+    
 }
 
 .info-social a i{
@@ -176,59 +180,17 @@ img{
     height: 100px;
 }
 
-/* styling birth registration page */
-.form-container{
-    
-    height: 720px;
-    width: 100%;
-    border: 2px solid ;
-   
-}
-.form-container .birth-title h3{
-    font-size: auto;
-    text-align: center;
-    margin: 1rem;
-    color: black;
-    font-weight: 800;
-    
-}
+.login-signup{
+    display: flex;
 
-.form-value-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
 }
-.personal-detail, .Father-detail, .GrandFathers-detail, .Mother-detail{
-    display: flex;
-    flex-direction: column;
-    margin: 0rem 5rem;
-}
-.personal-detail h4, .Father-detail h4, .GrandFathers-detail h4, .Mother-detail h4{
-    margin-bottom: 1rem;
-    color: #626262;
+.login-signup a{
+    text-decoration: none;
+    color: white;
     font-weight: bold;
+    font-size: 18px;
+    margin-left: 1rem;
 }
-.personal-detail form .top-content , .bottom-content{
-    display: flex;
-    
-}
-.personal-detail form .top-content input{
-    /* width: 500px; */
-    margin: 0rem 4rem;
-}
-.personal-detail form .bottom-content input{
-    /* width: 500px; */
-    margin: 0rem 4rem;
-}
-.personal-detail .bottom-content #birthday{
-    height: 40px;
-    width: 30%;
-    padding: 0.2rem;
-    color: rgb(123, 121, 119);
-    outline: none;
-}
-.personal-detail .address{
-    margin-left: 4rem;
-    width: 42%;
+.login-signup a:hover{
+    text-decoration: underline;
 }
