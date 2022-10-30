@@ -1,0 +1,31 @@
+<!-- include header -->
+<%- include('include/header.ejs') %>
+
+<!-- hero section here -->
+
+<div class="login-contianer">
+  <h3 class="titlesign">Login Page</h3>
+
+  <% if (messages.error) {%> <%= messages.error %> <% } %>
+
+  <form action="/login" method="post">
+    <div class="row1">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="email" required />
+    </div>
+    <div class="row1">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="password"
+        required
+      />
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<!-- include footer -->
+<% include('include/footer.ejs') %>
