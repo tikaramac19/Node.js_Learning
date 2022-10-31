@@ -12,6 +12,8 @@ router.get("/login",checkNotAuthenticated ,services.loginRoutes);
 
 router.get("/register",checkNotAuthenticated, services.signupRoutes);
 
+router.get("/birth-certificate", checkAuthenticated,services.birthRoute);
+router.get("/death-certificate", checkAuthenticated,services.deathRoute)
 //API
 
 
