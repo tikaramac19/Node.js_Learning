@@ -11,6 +11,7 @@ const initializePassport = require("./passport-config");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
+const methodOverride = require("method-override");
 
 dotenv.config({ path: ".env" });
 const PORT = process.env.PORT || 8080;
@@ -42,6 +43,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride("_method"));
 
 // load assets
 
@@ -77,6 +79,21 @@ app.post("/register", async (req, res) => {
   }
   console.log(users);
 });
+
+// app.delete('/logout', (req, res)=>{
+//   req.logOut();
+//   res.redirect('/login')
+// })
+
+// for logout user
+app.delete('/logout', (req,res,next)=>{
+  req.logout(function(err){
+    if(err){
+      return next(err);
+    }
+    res.redirect('/login')
+  })
+})
 
 // loading routes
 app.use("/", router);
