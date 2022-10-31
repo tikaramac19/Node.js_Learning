@@ -12,13 +12,13 @@ exports.loginRoutes = (req,res)=>{
 exports.signupRoutes = (req,res)=>{
     res.render("signup");
 }
-// exports.birthRoute = (req,res)=>{
-//     res.render('birth-certificate')
-// }
+exports.birthRoute = (req,res)=>{
+    res.render('birthcertificate');
+}
 
-// exports.deathRoute = (req,res)=>{
-//     res.render('death-certificate')
-// }
+exports.deathRoute = (req,res)=>{
+    res.render('deathcertificate')
+}
 
 // exports.marrigeRoute = (req,res)=>{
 //     res.render('marrige-certificate')
