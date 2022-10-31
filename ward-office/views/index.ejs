@@ -8,7 +8,9 @@
     <h5>
       <span><%= name %></span>
     </h5>
-    <a href="#">Log out</a>
+    <form action="/logout?_method=DELETE" method="post" class="logout">
+      <button type="submit">Log Out</button>
+    </form>
   </div>
   <div class="middle-container">
     <div class="ward-information">
@@ -96,11 +98,11 @@
   <div class="right-services">
     <h3>Services</h3>
     <ul>
-      <li><a href="#">Birth Certificate</a></li>
-      <li><a href="#">Death Certificate</a></li>
+      <li><a href="/birth-certificate">Birth Certificate</a></li>
+      <li><a href="/death-certificate">Death Certificate</a></li>
 
-      <li><a href="#">Marriage Certificate</a></li>
-      <li><a href="#">Vital Certificate</a></li>
+      <li><a href="/marriage-certificate">Marriage Certificate</a></li>
+      <li><a href="/vital-certificate">Vital Certificate</a></li>
     </ul>
   </div>
 </div>
