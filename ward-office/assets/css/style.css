@@ -344,52 +344,54 @@ img {
   font-weight: bold;
   color: white;
 }
-.hero-container .left-stiky a {
+.hero-container .left-stiky .logout {
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
   /* margin-top: 0.5rem; */
+}
+.hero-container .left-stiky .logout button {
+  font-size: 1rem;
   padding: 0.1rem 0.8rem;
   border-radius: 0.3rem;
-
   background-color: #ddd;
   color: black;
   font-weight: bold;
+  outline: none;
+  border: none;
 }
-.hero-container .left-stiky a:hover {
+.hero-container .left-stiky .logout button:hover {
   background-color: white;
   transition: all 0.2s ease;
 }
 
 /* middle container styling */
-.hero-container .middle-container{
+.hero-container .middle-container {
   margin-left: 15%;
   margin-top: 2rem;
   width: 60%;
 }
 
-
 /* home page services section  */
-.hero-container .right-services{
+.hero-container .right-services {
   margin-top: 2rem;
   width: 20%;
 }
-.right-services h3{
+.right-services h3 {
   font-size: 1.9rem;
   font-weight: bold;
   color: rgb(80, 80, 80);
   letter-spacing: 0.1rem;
 }
-.right-services ul li{
+.right-services ul li {
   list-style: none;
   font-size: 1.1rem;
   padding: 0.6rem 0rem;
 }
-.right-services ul li a{
+.right-services ul li a {
   text-decoration: none;
   color: #04aa6d;
-  
 }
-.right-services ul li a:hover{
+.right-services ul li a:hover {
   text-decoration: underline;
 }
