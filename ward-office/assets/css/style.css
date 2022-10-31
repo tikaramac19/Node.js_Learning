@@ -313,9 +313,83 @@ img {
   font-size: 1.3rem;
   margin-left: 0.4rem;
 }
-.login-contianer .form-container .error{
-    margin-top: 1rem;
-    color: crimson;
-    font-weight: bold;
-    font-size: 1.5rem;
+.login-contianer .form-container .error {
+  margin-top: 1rem;
+  color: crimson;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* styling hero container #index page / home page */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.hero-container .left-stiky {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin: 1rem;
+  border: 1px solid #04aa6d;
+  padding: 0.5rem 0.8rem;
+  background-color: #04aa6d;
+  border-radius: 0.4rem;
+}
+.hero-container .left-stiky h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+.hero-container .left-stiky a {
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  /* margin-top: 0.5rem; */
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.3rem;
+
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;
+}
+.hero-container .left-stiky a:hover {
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+/* middle container styling */
+.hero-container .middle-container{
+  margin-left: 15%;
+  margin-top: 2rem;
+  width: 60%;
+}
+
+
+/* home page services section  */
+.hero-container .right-services{
+  margin-top: 2rem;
+  width: 20%;
+}
+.right-services h3{
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: rgb(80, 80, 80);
+  letter-spacing: 0.1rem;
+}
+.right-services ul li{
+  list-style: none;
+  font-size: 1.1rem;
+  padding: 0.6rem 0rem;
+}
+.right-services ul li a{
+  text-decoration: none;
+  color: #04aa6d;
+  
+}
+.right-services ul li a:hover{
+  text-decoration: underline;
 }
