@@ -2,12 +2,56 @@
 
 <%- include('include/header.ejs') %>
 
-
 <div class="birth-container">
+  <div class="back">
     <a href="/">Back To Home</a>
-    BIrth certificate registration
-</div>
+  </div>
+  <div class="birthform-container">
+    <form action="/birth-certificate" method="post">
+      <div class="personal">
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" name="fname " />
+        </div>
+        <div>
+          <label for="mname">Middle Name</label>
+          <input type="text" name="mname " />
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname " />
+        </div>
 
+        <div>
+          <label for="fathername">Father's Name</label>
+          <input type="text" name=" fathername" />
+        </div>
+        <div>
+          <label for="mothername">Mother's Name</label>
+          <input type="text" name=" mothername" />
+        </div>
+        <div>
+          <label for="gfather">Grand Father's Name</label>
+          <input type="text" name=" gfather" />
+        </div>
+
+        <div>
+          <label for="bdate">Birth Date</label>
+          <input type="text" name="fname " />
+        </div>
+        <div>
+            <label for="bdistrict">Birth District</label>
+            <input type="text" name="bdistrict">
+        </div>
+        <div>
+          <label for="baddress">Birth Address</label>
+          <input type="text" name="baddress " />
+        </div>
+        <button type="submit">Submit</button> 
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- including footer -->
 <% include('include/footer.ejs') %>
