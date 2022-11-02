@@ -12,14 +12,23 @@ const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
+const mongoose = require('mongoose');
 
+// importing birth schema from model
 const Birth = require('./server/model/birthSchema')
+
+// importing connection 
+const connectDB = require('./server/database/conn');
+
+// calling database connectiondb
+connectDB();
 
 dotenv.config({ path: ".env" });
 const PORT = process.env.PORT || 8080;
 
 // for encrypt the password
 const bcrypt = require("bcrypt");
+const { ifError } = require("assert");
 // const passport = require("passport");
 // storing data on localstorage
 const users = [];
