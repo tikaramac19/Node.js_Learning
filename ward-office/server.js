@@ -12,16 +12,19 @@ const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
-const mongoose = require('mongoose');
 
-// importing birth schema from model
-const Birth = require('./server/model/birthSchema')
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 // importing connection 
 const connectDB = require('./server/database/conn');
 
 // calling database connectiondb
 connectDB();
+
 
 dotenv.config({ path: ".env" });
 const PORT = process.env.PORT || 8080;
@@ -41,9 +44,10 @@ initializePassport(
   (id) => users.find((user) => user.id === id)
 );
 
+
 // set view engine
 app.set("view engine", "ejs"); // allows us to use ejs template engine
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: true }));
 app.use(flash());
 app.use(
   session({
@@ -105,6 +109,7 @@ app.delete('/logout', (req,res,next)=>{
     res.redirect('/login')
   })
 })
+
 
 // loading routes
 app.use("/", router);
