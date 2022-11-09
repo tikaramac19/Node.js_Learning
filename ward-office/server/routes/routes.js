@@ -9,12 +9,12 @@ router.get("/",checkAuthenticated, services.homeRoutes);
 // Root Router
 // method GET/birth-certificate
 
-router.get("/login",services.loginRoutes);
+router.get("/login",checkNotAuthenticated ,services.loginRoutes);
 
-router.get("/register", services.signupRoutes);
+router.get("/register", checkNotAuthenticated,services.signupRoutes);
 
-router.get("/birth-certificate",services.birthRoute);
-router.get("/birth-certificate/save",services.birthSave);
+router.get("/birth-certificate",checkAuthenticated,services.birthRoute);
+router.get("/birth-certificate/save",checkAuthenticated,services.birthSave);
 router.get("/death-certificate", checkAuthenticated,services.deathRoute);
 
 //API Birth certificate
