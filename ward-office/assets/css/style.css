@@ -395,3 +395,79 @@ img {
 .right-services ul li a:hover {
   text-decoration: underline;
 }
+
+/* styling birth-certificate section */
+.birth-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.birth-container .back{
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: 1.1rem;
+  
+  font-weight: bold;
+  border: 2px solid 04aa6d;
+  background-color: #04aa6d;
+  border-radius: 0.3rem;
+}
+.birth-container .back a{
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  
+}
+.birth-container .back a:hover{
+  color: #333;
+  transition: all 0.3s ease;
+}
+.birthform-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0rem 2rem ;
+  width: 100%;
+  
+}
+.birthform-container .title{
+  font-size: 2rem;
+  color: #04aa6d;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.birthform-container form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.birthform-container form .personal label{
+     /* margin: 0rem; */
+     font-size: 1.3rem;
+     color: rgb(65, 65, 65);
+     margin: 1rem 0rem;
+     font-weight: bold;
+     
+}
+
+.birthform-container form .personal input{
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border:1px solid black;
+  border-radius: 0.5rem;
+  padding: 0rem 1rem;
+}
+.birthform-container form .personal button{
+  margin: 2rem 0rem;
+  width: 30%;
+  text-align: center;
+  height: 38px;
+  border: 1px solid;
+  outline: none;
+  border-radius: 0.2rem;
+}
