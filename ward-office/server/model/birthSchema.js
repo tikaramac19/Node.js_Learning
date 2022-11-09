@@ -1,36 +1,36 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-let birthSchema = new mongoose.Schema({
-    fname:{
-        type: String
-    },
-    mname:{
-        type: String
-    },
-    lname:{
-        type: String
-    },
-    fathername:{
-        type: String
-    },
-    mothername:{
-        type: String
-    },
-    gfather:{
-        type: String
-    },
-    bdate:{
-        type: Number
-    },
-    bdistrict:{
-        type: String
-    },
-    baddress:{
-        type: String
-    }
+const SchemaBirth = new mongoose.Schema({
+  fname: {
+    type: String,
+  },
+  mname: {
+    type: String,
+  },
+  lname: {
+    type: String,
+  },
+  fathername: {
+    type: String,
+  },
+  mothername: {
+    type: String,
+  },
+  gfather: {
+    type: String,
+  },
+  bdate: {
+    type: String,
+  },
+  bdistrict: {
+    type: String,
+    required: true,
+  },
+  baddress: {
+    type: String,
+  },
+});
 
-})
+const Birthdb  = mongoose.model("SchemaBirth", SchemaBirth)
 
-const Birth = mongoose.model('Birth', birthSchema);
-
-module.exports = Birth;
+module.exports = Birthdb ;
