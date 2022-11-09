@@ -397,72 +397,69 @@ img {
 }
 
 /* styling birth-certificate section */
-.birth-container{
+.birth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
 }
-.birth-container .back{
+.birth-container .back {
   position: absolute;
   top: 5%;
   left: 2%;
   font-size: 1.1rem;
-  
+
   font-weight: bold;
   border: 2px solid 04aa6d;
   background-color: #04aa6d;
   border-radius: 0.3rem;
 }
-.birth-container .back a{
+.birth-container .back a {
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  
 }
-.birth-container .back a:hover{
+.birth-container .back a:hover {
   color: #333;
   transition: all 0.3s ease;
 }
-.birthform-container{
+.birthform-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1em 0rem 2rem ;
+  margin: 1em 0rem 2rem;
   width: 100%;
-  
 }
-.birthform-container .title{
+.birthform-container .title {
   font-size: 2rem;
   color: #04aa6d;
   font-weight: bold;
   margin-bottom: 2rem;
   text-align: center;
 }
-.birthform-container form{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.birthform-container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.birthform-container form .personal label{
-     /* margin: 0rem; */
-     font-size: 1.3rem;
-     color: rgb(65, 65, 65);
-     margin: 1rem 0rem;
-     font-weight: bold;
-     
+.birthform-container form .personal label {
+  /* margin: 0rem; */
+  font-size: 1.3rem;
+  color: rgb(65, 65, 65);
+  margin: 1rem 0rem;
+  font-weight: bold;
 }
 
-.birthform-container form .personal input{
+.birthform-container form .personal input {
   width: 100%;
   height: 40px;
   outline: none;
-  border:1px solid black;
+  border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0rem 1rem;
 }
-.birthform-container form .personal button{
+.birthform-container form .personal button {
   margin: 2rem 0rem;
   width: 30%;
   text-align: center;
@@ -470,4 +467,60 @@ img {
   border: 1px solid;
   outline: none;
   border-radius: 0.2rem;
+}
+
+/* save data contaner */
+.datasave-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.datasave-container .back {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 2px solid 04aa6d;
+  background-color: #04aa6d;
+  border-radius: 0.3rem;
+}
+.datasave-container .back a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+.datasave-container .back a:hover {
+  color: #333;
+  transition: all 0.3s ease;
+}
+.datasave-container .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.datasave-container .details .det-title {
+  margin: 1.1rem 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.datasave-container .details .users {
+  border: 1px solid;
+  width: 500px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.datasave-container .details .users > div {
+  font-size: 1.3rem;
+  padding: 0.2rem 0rem;
+  color: #333;
+}
+
+.datasave-container .details .users div span {
+  color: #04aa6d;
+  font-weight: bold;
+  margin: 0rem 0.7rem;
 }
