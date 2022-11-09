@@ -1,10 +1,52 @@
 <!-- include header -->
 <%- include('include/header.ejs') %>
 
-<span><a href="/">Back to home</a></span>
-<h1>Saved data here!</h1>
+<div class="datasave-container">
+  <span class="back"><a href="/">Back to home</a></span>
+  <div class="details">
+    <div class="det-title">Review Your information</div>
+    <% for(let i = 0; i < birthUsers.length; i++) {%>
 
+    <div class="users">
+      <div>
+        Name: <span><%= birthUsers[i].fname %> </span>
+        <span><%= birthUsers[i].mname %> </span><span><%= birthUsers[i].lname %> </span>
+      </div>
+      <div>
+       Father's Name: <span><%= birthUsers[i].fathername %> </span>
+      </div>
+      <div>
+        Mother's Name: <span><%= birthUsers[i].mothername %> </span>
+       </div>
+       <div>
+        Grand Father's Name: <span><%= birthUsers[i].gfather %> </span>
+       </div>
+       <div>
+        Birth Date: <span><%= birthUsers[i].bdate %> </span>
+       </div>
+       <div>
+        Birth District: <span><%= birthUsers[i].bdistrict %> </span>
+       </div>
+       <div>
+        Birth Address: <span><%= birthUsers[i].baddress %> </span>
+       </div>
+       <div class="action">
+        <a href="#" class="btn border-shadow update">
+            <span class="text-gradient">
+                <i class="fa-solid fa-pencil"></i>
+            </span>
+        </a>
+        <a href="#" class="btn border-shadow delete">
+            <span class="text-gradient">
+                <i class="fa-solid fa-delete-left"></i>
+            </span>
+        </a>
+       </div>
+    </div>
 
+    <% } %>
+  </div>
+</div>
 
 <!-- including footer -->
 <% include('include/footer.ejs') %>
