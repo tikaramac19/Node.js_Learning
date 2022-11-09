@@ -20,6 +20,10 @@ exports.deathRoute = (req,res)=>{
     res.render('deathcertificate')
 }
 
+exports.birthSave = (req,res)=>{
+    res.render('dataSave');
+}
+
 // exports.marrigeRoute = (req,res)=>{
 //     res.render('marrige-certificate')
 // }
