@@ -4,49 +4,50 @@
 
 <div class="birth-container">
   <div class="back">
-    <a href="/">Back To Home</a>
+    <a href="/"> Back To Home</a>
   </div>
   <div class="birthform-container">
-    <form action="/birth-certificate" method="post">
+    <div class="title">Birth-Certificate Registration</div>
+    <form action="/api/birth/create" method="post">
       <div class="personal">
         <div>
           <label for="fname">First Name</label>
-          <input type="text" name="fname " />
+          <input type="text" name="fname" required />
         </div>
         <div>
           <label for="mname">Middle Name</label>
-          <input type="text" name="mname " />
+          <input type="text" name="mname" required />
         </div>
         <div>
           <label for="lname">Last Name</label>
-          <input type="text" name="lname " />
-        </div>
+          <input type="text" name="lname" required />
+        </div> 
 
-        <div>
+         <div>
           <label for="fathername">Father's Name</label>
-          <input type="text" name=" fathername" />
+          <input type="text" name="fathername" required/>
         </div>
         <div>
           <label for="mothername">Mother's Name</label>
-          <input type="text" name=" mothername" />
+          <input type="text" name="mothername" required />
         </div>
         <div>
           <label for="gfather">Grand Father's Name</label>
-          <input type="text" name=" gfather" />
+          <input type="text" name="gfather" required />
         </div>
 
         <div>
           <label for="bdate">Birth Date</label>
-          <input type="text" name="fname " />
+          <input type="text" name="bdate" required/>
         </div>
         <div>
             <label for="bdistrict">Birth District</label>
-            <input type="text" name="bdistrict">
+            <input type="text" name="bdistrict" required/>
         </div>
         <div>
           <label for="baddress">Birth Address</label>
-          <input type="text" name="baddress " />
-        </div>
+          <input type="text" name="baddress" required />
+        </div> 
         <button type="submit">Submit</button> 
       </div>
     </form>
