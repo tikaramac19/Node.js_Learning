@@ -15,7 +15,7 @@ router.get("/register", checkNotAuthenticated,services.signupRoutes);
 
 router.get("/birth-certificate",checkAuthenticated,services.birthRoute);
 router.get("/birth-certificate/save",checkAuthenticated,services.birthSave);
-router.get("/death-certificate",services.deathRoute);
+router.get("/death-certificate",checkAuthenticated,services.deathRoute);
 
 //API Birth certificate
 
