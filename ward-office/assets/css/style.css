@@ -586,3 +586,155 @@ img {
   height: 300px;
   width: 400px;
 }
+
+/* death-certificate page styling  */
+.death-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.death-container .back{
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: 1.1rem;
+
+  font-weight: bold;
+  border: 2px solid 04aa6d;
+  background-color: #04aa6d;
+  border-radius: 0.3rem;
+}
+.death-container .back a{
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+.death-container .back a:hover{
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.deathform-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0rem 2rem;
+  width: 100%;
+}
+.deathform-container .title {
+  font-size: 2rem;
+  color: #04aa6d;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.deathform-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deathform-container form .deathperson-info{
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.deathform-container form .deathperson-info label{
+  font-size: 1.2rem;
+  color: rgb(65, 65, 65);
+  margin: 1rem 0rem;
+  font-weight: bold;
+}
+.deathform-container form .deathperson-info input{
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0rem 1rem;
+}
+.deathform-container form .death-bibaran{
+  margin: 1.4rem 0rem;
+  
+}
+.deathform-container form .death-bibaran h3{
+  font-size: 1.4rem;
+  color:#04aa6d;
+}
+.deathform-container form .death-bibaran label{
+  font-size: 1.2rem;
+  color: rgb(65, 65, 65);
+  margin: 1rem 0rem;
+  font-weight: bold;
+}
+.deathform-container form .death-bibaran input{
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0rem 1rem;
+}
+.deathform-container form .death-area{
+  margin: 1.4rem 0rem;
+
+}
+.deathform-container form .death-area h3{
+  font-size: 1.4rem;
+  color:#04aa6d;
+  
+}
+.deathform-container form .death-area label{
+  margin-top: 1rem;
+}
+.deathform-container form .death-area span{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 1rem;
+  /* text-align: center; */
+}
+.deathform-container form .death-area input{
+  width: 20px;
+  height: 30px;
+  display: inline;
+}
+.deathform-container form .marritial{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.deathform-container form .marritial h3{
+  font-size: 1.4rem;
+  color:#04aa6d;
+  float: left;
+}
+.deathform-container form .marritial label{
+  margin-top: 1rem;
+  margin-bottom: 1.6rem;
+}
+.deathform-container form .marritial span{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 1rem;
+}
+.deathform-container form .marritial input{
+  width: 20px;
+  height: 30px;
+  display: inline;
+}
+.deathform-container form .btn > button{
+  font-size: 1.3rem;
+  width: 200px;
+  text-align: center;
+  height: 38px;
+  border: 1px solid;
+  outline: none;
+  border-radius: 0.2rem;
+}
