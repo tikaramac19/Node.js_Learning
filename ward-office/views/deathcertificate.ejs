@@ -2,12 +2,81 @@
 
 <%- include('include/header.ejs') %>
 
-
 <div class="death-container">
-    <a href="/">Back To Home</a>
-    Death certificate registration
+  <div class="back">
+    <a href="/"> Back To Home</a>
+  </div>
+  <div class="deathform-container">
+    <div class="title">Death-Certificate Registration</div>
+    <form action="" method="post">
+      <div class="deathperson-info">
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" required />
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname" required />
+        </div>
+        <div>
+          <label for="bdate">Birth Date</label>
+          <input type="text" name="bdate" required />
+        </div>
+        <div>
+            <label for="ddate">Death Date</label>
+            <input type="text" name="ddate" required />
+        </div>
+      </div>
+      <div class="death-bibaran">
+        <h3>Birth Address Information</h3>
+        <div>
+            <label for="district">District</label>
+            <input type="text" name="bdistrict" required>
+        </div>
+        <div>
+            <label for="municip">Municipality</label>
+            <input type="text" name="municip" required>
+        </div>
+        <div>
+            <label for="ward">Ward No.</label>
+            <input type="number" name="ward" required>
+        </div>
+        <div>
+            <label for="houseno">House No.</label>
+            <input type="number" name="houseno">
+        </div>
+        <div>
+            <label for="village">Village/ Tole</label>
+            <input type="text" name="village" required>
+        </div>
+        <div>
+            <label for="citizenship">Citizenship No.</label>
+            <input type="text" name="citizenship" required>
+        </div>
+      </div>
+      <div class="death-area">
+        <h3>In which place the person died?</h3>
+        <label >
+            <span>House</span>
+            <input type="checkbox" name="ownhouse">
+            <span>Hospital</span>
+            <input type="checkbox" name="hospital">
+            <span>Other</span>
+            <input type="checkbox" name="other">
+        </label>
+      </div>
+      <div class="marritial">
+        <h3>marital status ?</h3>
+        <label >
+            <span>Married</span>
+            <input type="checkbox" name="married">
+            <span>Un-Married</span>
+            <input type="checkbox" name="unmarried">
+        </label>
+      </div>
+    </form>
+  </div>
 </div>
-
 
 <!-- including footer -->
 <% include('include/footer.ejs') %>
