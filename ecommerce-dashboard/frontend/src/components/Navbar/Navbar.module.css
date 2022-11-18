@@ -1,0 +1,26 @@
+.navbar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* max-height: 100px; */
+    background-color: skyblue;
+    padding: 10px;
+}
+
+
+.navbar_container ul li{
+    display: inline-block;
+    padding: 1rem;
+    list-style-type: none;
+}
+.navbar_container ul li a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+}
+.navbar_container ul li a:hover{
+    color: blueviolet;
+    transition: all 0.2s ease;
+}

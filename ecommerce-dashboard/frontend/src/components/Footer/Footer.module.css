@@ -1,0 +1,15 @@
+.footer_container{
+    position: absolute;
+    bottom: 0%;
+    background-color: skyblue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 15px; */
+}
+.footer_container p{
+    font-size: 1.1rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: rgb(55, 54, 54);
+}
