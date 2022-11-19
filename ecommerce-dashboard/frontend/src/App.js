@@ -11,12 +11,11 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          
           <Route element={<PrivateComponent />}>
             <Route path="/" element={<h2> Product Listing </h2>} exact />
             <Route path="/add" element={<h2> Add Product </h2>} />
             <Route path="/update" element={<h2> Update Product </h2>} />
-            <Route path="/logout" element={<h2> Logout dashboard </h2>} />
+            {/* <Route path="/logout" element={<h2> Logout dashboard </h2>} /> */}
             <Route path="/profile" element={<h2> Profile section </h2>} />
           </Route>
 
