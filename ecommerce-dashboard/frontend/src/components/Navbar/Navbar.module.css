@@ -11,7 +11,7 @@
 
 .navbar_container ul li{
     display: inline-block;
-    padding: 1rem;
+    padding: 0.7rem 2rem;
     list-style-type: none;
 }
 .navbar_container ul li a{
