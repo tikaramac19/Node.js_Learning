@@ -38,7 +38,7 @@ const Signup = () => {
     localStorage.setItem("user", JSON.stringify(response));
 
     if (response) {
-      navigate("/profile");
+      navigate("/");
     }
   };
 
