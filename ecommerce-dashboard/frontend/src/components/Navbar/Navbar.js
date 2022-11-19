@@ -1,10 +1,16 @@
 import React, { useEffect } from "react";
 import styles from "./Navbar.module.css";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const auth = localStorage.getItem("user");
+  const navigate = useNavigate();
+  // logout function
+  const logOut = () => {
+    localStorage.clear(); // it will clear the localstorage
+    navigate('/signup')
+  };
 
   return (
     <>
@@ -24,7 +30,9 @@ const Navbar = () => {
           </li>
           <li>
             {auth ? (
-              <Link to="/logout">Logout</Link>
+              <Link onClick={logOut} to="/signup">
+                Logout
+              </Link>
             ) : (
               <Link to="/signup">Signup</Link>
             )}
