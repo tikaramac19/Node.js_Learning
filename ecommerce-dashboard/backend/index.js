@@ -31,18 +31,23 @@ app.post("/register", async (req, res) => {
 
   let result = await user.save();
 
+  //   console.log(result);
+
+  result = result.toObject();
+
+  delete result.password // it will remove the password while response
+
   res.send(result);
 });
 
 // signIn api
 app.post("/login", async (req, res) => {
-  console.log(req.body);
+//   console.log(req.body);
 
   if (req.body.password && req.body.email) {
     let user = await SignUp.findOne(req.body).select("-password");
 
     user ? res.send(user) : res.send({ result: "No user found" });
-    
   } else {
     res.send({ result: "NO user found." });
   }
