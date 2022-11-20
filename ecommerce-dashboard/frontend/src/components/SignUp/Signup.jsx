@@ -9,14 +9,14 @@ const Signup = () => {
 
   const navigate = useNavigate();
 
-  // redirect to the home page after user created and account 
+  // redirect to the home page after user created and account
   // user unable to access signup page after registration
 
   useEffect(() => {
     const auth = localStorage.getItem("user");
 
     if (auth) {
-      navigate("/"); 
+      navigate("/");
     }
   }, []);
 
@@ -38,7 +38,7 @@ const Signup = () => {
     localStorage.setItem("user", JSON.stringify(response));
 
     if (response) {
-      navigate("/");
+      navigate("/login");
     }
   };
 
