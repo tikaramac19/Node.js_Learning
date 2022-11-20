@@ -9,7 +9,7 @@ const Navbar = () => {
   // logout function
   const logOut = () => {
     localStorage.clear(); // it will clear the localstorage
-    navigate("/signup");
+    navigate("/login");
   };
 
   return (
@@ -25,15 +25,19 @@ const Navbar = () => {
           <li>
             <Link to="/update">Update Products</Link>
           </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
 
           <li>
             {auth ? (
-              <Link onClick={logOut} to="/signup">
-                Logout
-              </Link>
+              <>
+                <li>
+                  <Link to="/profile">Profile</Link>{" "}
+                </li>
+                <li>
+                  <Link onClick={logOut} to="/signup">
+                    Logout
+                  </Link>
+                </li>
+              </>
             ) : (
               <>
                 <li>
