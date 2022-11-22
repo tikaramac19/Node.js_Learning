@@ -64,6 +64,18 @@ app.post("/add-product", async (req,res)=>{
       res.send(productResult);
 });
 
+// product list apis
+app.get("/products", async (req,res) =>{
+  let products = await Product.find();
+  // res.send("Hello there")
+  if(products.length > 0){
+    res.send(products)
+  }else{
+    res.send({result: "No Products found"})
+  }
+})
+
+
 app.listen(PORT, (req, res) => {
   console.log(`Server run at : http://localhost:${PORT}`);
 });
