@@ -23,7 +23,7 @@ const AddProduct = () => {
       setError(true);
       return false;
     }
-    
+
     // getting user_id of the loggedIn user
     const userId = JSON.parse(localStorage.getItem("user"))._id;
     // console.log(userId);
@@ -37,11 +37,11 @@ const AddProduct = () => {
     });
 
     const productData = await result.json();
-    console.warn(productData);
+    // console.warn(productData);
 
-    // if (productData) {
-    //   navigate("/");
-    // }
+    if (productData) {
+      navigate("/");
+    }
   };
 
   return (
