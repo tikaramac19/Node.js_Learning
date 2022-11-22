@@ -17,7 +17,7 @@ const Signup = () => {
 
     if (auth) {
       navigate("/signin");
-    }
+    }  
   }, []);
 
   const submitValue = async (e) => {
