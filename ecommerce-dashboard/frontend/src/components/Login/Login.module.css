@@ -32,6 +32,9 @@
     outline: none;
     border: 1px solid skyblue;
 }
+.signin_container form div .invalid_msg{
+    color: crimson;
+}
 .signin_container form button{
     font-size: 1rem;
     width: 130px;
