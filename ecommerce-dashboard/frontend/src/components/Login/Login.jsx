@@ -6,7 +6,7 @@ import styles from "./Login.module.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   // redirect to the home page after user created and account
   // user unable to access signup page after registration
@@ -23,6 +23,11 @@ const Login = () => {
     e.preventDefault();
 
     // console.log(email, password);
+
+    if (!email || !password) {
+      setError(true);
+      return false;
+    }
 
     const result = await fetch("http://localhost:5000/login", {
       method: "post",
@@ -59,8 +64,12 @@ const Login = () => {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
-              required
             />
+            {error && !email && (
+              <span className={styles.invalid_msg}>
+                *** Enter valid username !! ***
+              </span>
+            )}
           </div>
           <div className="password">
             <label htmlFor="">Password:</label>
@@ -72,8 +81,12 @@ const Login = () => {
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
-              required
             />
+            {error && !password && (
+              <span className={styles.invalid_msg}>
+                *** Enter valid password !! ***
+              </span>
+            )}
           </div>
           <button type="submit">Sign In</button>
         </form>
