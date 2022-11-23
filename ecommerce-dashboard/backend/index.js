@@ -56,25 +56,34 @@ app.post("/login", async (req, res) => {
 });
 
 // Product Api's
-app.post("/add-product", async (req,res)=>{
-      let product = new Product(req.body);
+app.post("/add-product", async (req, res) => {
+  let product = new Product(req.body);
 
-      let productResult = await product.save();
+  let productResult = await product.save();
 
-      res.send(productResult);
+  res.send(productResult);
 });
 
 // product list apis
-app.get("/products", async (req,res) =>{
+app.get("/products", async (req, res) => {
   let products = await Product.find();
   // res.send("Hello there")
-  if(products.length > 0){
-    res.send(products)
-  }else{
-    res.send({result: "No Products found"})
+  if (products.length > 0) {
+    res.send(products);
+  } else {
+    res.send({ result: "No Products found" });
   }
-})
+});
 
+// product delete apis
+app.delete("/product/:id", async (req, res) => {
+  // res.send("delete route working")
+  // res.send(req.params.id);
+
+  const result = await Product.deleteOne({ _id: req.params.id });
+
+  res.send(result);
+});
 
 app.listen(PORT, (req, res) => {
   console.log(`Server run at : http://localhost:${PORT}`);
