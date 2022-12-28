@@ -1,7 +1,15 @@
 const http = require('http');
 const fs = require('fs');
+const express = require('express');
+const app = express();
 // console.log(http)
 const PORT = 8080;
+
+app.get('/', (req,res)=>{
+    res.json({
+        msg: "home page"
+    })
+})
 
 http.createServer(function(req, res){
         // res.write("Hello there");
